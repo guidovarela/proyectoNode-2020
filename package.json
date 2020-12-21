@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-hbs-11122020",
+  "version": "0.0.0",
+  "private": false,
+  "author": "Guido Varela Coletta",
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.0.0-beta1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "hbs": "^4.1.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.4.17",
+    "nodemon": "^2.0.6",
+    "sequelize": "^6.3.5"
+  }
+}

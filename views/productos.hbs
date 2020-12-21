@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <div class="row">
+
+    {{#each productos}}
+    <div class="col-md-4">
+        {{!-- linkeamos al productos + id -> vista del producto --}}
+        <a href="/productos/{{id}}" class="btn btn-link">
+            <div class="card">
+                <img class="card-img-top img-fluid w-100" src="img/{{imagen}}" alt="">
+
+                <div class="card-body">
+                    <h4 class="card-title">{{nombre}}</h4>
+                    <p class="card-text">
+                        <span class="h3 badge bg-primary"> cantidad: {{stock}}</span>
+                        <span class="h2">${{precio}}</span>
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+    {{/each}}
+    </div>
+</div>

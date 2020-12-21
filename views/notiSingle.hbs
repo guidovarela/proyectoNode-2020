@@ -1,0 +1,41 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8">
+            {{!-- imagen, titulo, subtitulo, autor, contenido  --}}
+
+            <div class="imagen">
+                <img class="img-fluid" src="/img/news/{{noticia.imagen}}.jpg" alt="Imagen de la nota {{noticia.id}}">
+            </div>
+
+            <div class="txt">
+                <h2>{{{noticia.titulo}}}</h2>
+                <p>{{{noticia.subtitulo}}}</p>
+                <hr>
+            </div>
+
+            <div class="content">
+                {{{noticia.contenido}}}
+            </div>
+
+        </div>
+        <aside class="col-md-4">
+            <span class="h2 text-center">Mas Noticias</span>
+            {{#each noticias}}
+                <a href="/noticias/{{id}}">
+                    <div class="noticia my-1 p-4 bg-dark text-light rounded">
+                        <div class="row">
+                            <div class="col-5">
+                               <img src="/img/news/{{imagen}}.jpg" class='img-fluid' alt="">
+                            </div>
+                            <div class="col-7">
+                                {{titulo}}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {{/each}}
+        </aside>
+    </div>
+
+</div>

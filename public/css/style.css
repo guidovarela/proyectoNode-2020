@@ -1,0 +1,33 @@
+html{
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin:0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.box{
+  width:90%;
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  }
+  .userBox{
+    width:30%;
+    border:2px grey solid;
+    border-radius: 15px;
+    padding:2%;
+  }
+  .imgBox{
+    width:256px
+    }
+    .imgBox img{
+      width: 100%
+    }

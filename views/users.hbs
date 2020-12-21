@@ -1,0 +1,25 @@
+<div class="container">
+
+    <h1 class="text-center">Users</h1>
+
+    {{!-- recorremos el array con un foreach, de HBS --}}
+        {{#each user}}
+            {{!-- condicion por true/false o por comparacion de valores --}}
+            {{#if edad}}
+            <div>
+                    <img src='img/{{img}}' alt="{{nombre}}" title="Datos de {{nombre}}" width='256'>
+                    <hr>
+                    {{nombre}} - {{edad}}
+                    <p>{{descripcion}}</p>
+                </div>
+            {{else}}
+                <h2>Es menor de edad :(</h2>
+            {{/if}}
+            
+        {{/each}}
+
+    <div>
+        <a href="/" class="btn btn-primary">volver</a>
+
+    </div>
+</div>

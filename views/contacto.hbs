@@ -1,0 +1,36 @@
+
+<div class="container">
+
+    <h2>{{title}}</h2>
+    <hr>
+
+    <div class="row">
+        <div class="col">
+
+                {{#if errores}}
+                    <div class="errores">
+                    {{#each errores}}
+                        <div class="badge bg-danger">
+                            {{error}}
+                        </div>
+                    {{/each}}
+                    </div>
+                {{/if}}
+
+            <form action="/contacto" method="POST">
+                <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="nombre"  placeholder="Nombre" value="{{nombre}}">
+                </div>
+                <div class="form-group mt-3">
+                    <input type="email" class="form-control" name="email"  placeholder="Email" value="{{email}}">
+                </div> 
+                <div class="form-group mt-3">
+                    <textarea class="form-control" name="mensaje" placeholder="Mensaje">{{mensaje}} </textarea>
+                </div>
+                <button class="btn btn-warning mt-3" type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
