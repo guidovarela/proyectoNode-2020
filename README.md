@@ -3,4 +3,4 @@ Proyecto desarrollado para el curso de Profesional Webmaster, 2do cuatrimestr, 2
 [![NPM Version](https://img.shields.io/npm/v/npm.svg?style=flat)]()
 [![Node Version](https://img.shields.io/node/v/node.svg?style=flat)]()
 
-Desarrollado en <a href='https://nodejs.org/en/>'NodeJS</a> / <a href='https://handlebarsjs.com/'>Handelbars</a> / <a href='https://getbootstrap.com/'>Bootstrap</a>
+Desarrollado en <a href='https://nodejs.org/en/'>NodeJS</a> / <a href='https://handlebarsjs.com/'>Handelbars</a> / <a href='https://getbootstrap.com/'>Bootstrap</a>
