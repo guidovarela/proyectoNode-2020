@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('proyecto-hbs-11122020:server');
+var debug = require('debug')('proyectonode:server');
 var http = require('http');
 
 /**

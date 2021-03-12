@@ -1,18 +1,19 @@
+//importa Express
 var express = require('express');
+
+//Para utilizar las rutas, por medio de express
 var router = express.Router();
 
-let data = {
-  title: 'Express', 
-  nombre: 'Mateo',
-  descripcion:'Esto es un sitio generado en NodeJS y Express, por Handelbars',
-  edad:30,
+const data = {
+  nombre: "UTN FRBA",
+  localidad: "Buenos Aires"
 }
 
-/* GET home page. */
+/* llamada http -> GET */
 router.get('/', function(req, res, next) {
-  //res.send('Esto es la home')
-  res.render('index', {data, title:data.title});
-  //render renderiza una vista -> .hbs -> .html dinamico
+  //res.render -> renderiza una vista
+    //interpolacion de datos -> la ruta le manda a la vista (.hbs), informacion en un objeto
+  res.render('index.hbs', { title:"NodeJS",data:data });
 });
 
 module.exports = router;

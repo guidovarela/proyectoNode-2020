@@ -4,44 +4,22 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var hbs = require('hbs')
-var bodyParser = require('body-parser')
 
-
-
-//MySQL
-var db = require('./config/db')
-
-db.authenticate()
-  .then(
-    () => {
-      console.log("Conexion a MySQL Exitosa :)");
-    }
-  )
-  .catch(
-    (error) => {
-      console.log("Error en la conexion :(" + error);
-    }
-  )
-
-
-//routes
+//Define las rutas
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var contactoRouter = require('./routes/contacto')
-var productosRouter = require('./routes/productos')
-var noticiasRouter = require('./routes/noticias')
+//Crear la ruta contacto
+var contactoRouter = require('./routes/contacto');
+//Productos
+var productosRouter = require('./routes/productos');
 
 var app = express();
-
-app.use(bodyParser.text({ type: 'text/html' }))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-
-//registrar Partials
-hbs.registerPartials( __dirname + '/views')
-// hbs.registerPartials('./views')
+// Definir la ubicacion de todos los partials
+hbs.registerPartials(__dirname + '/views/partials')
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -49,13 +27,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//definir el path de la ruta
+//Como se usan las rutas definidas
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/contacto', contactoRouter)
+app.use('/usuarios', usersRouter);
+app.use('/contacto', contactoRouter);
 app.use('/productos', productosRouter)
-app.use('/noticias', noticiasRouter)
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
