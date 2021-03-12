@@ -11,7 +11,7 @@ let data = {
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //res.send('Esto es la home')
-  res.render('index', data);
+  res.render('index', {data, title:data.title});
   //render renderiza una vista -> .hbs -> .html dinamico
 });
 

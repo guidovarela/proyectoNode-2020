@@ -28,7 +28,7 @@ let legales = 'Al comprar estás asumiendo un compromiso. Haga todas las pregunt
 let envios = 'ENVIOS x CORREO A TODO EL PAIS. <br> Podes cargarle tu dirección en la misma compra (tené en cuenta que tiene que haber alguien para recibirlo), o si no podés cargar la dirección de la sucursal del correo que elijas cercana a tu domicilio, tambien dirección de algún local adherido a pickit para que retires por ahí, siempre eligiendo a tu comodidad.'
 
 router.get('/',function(req,res){
-    res.render('productos',{productos:productos})
+    res.render('productos',{productos:productos,title:"Productos"})
 })
 
 // router.get('/1',function(req,res){
@@ -51,7 +51,7 @@ router.get('/:id',(req, res) => {
         let prod = productos.find(productos => productos.id == idParam)
         console.log(prod)
         //[object]
-        res.render('prodSingle', { prod:prod, envios:envios, legales:legales});
+        res.render('prodSingle', { prod, envios, legales, title: prod.nombre});
 
     })
 
